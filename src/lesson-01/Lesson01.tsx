@@ -1,10 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import CodeBlock from "../atoms/CodeBlock";
 import CodeInline from "../atoms/CodeInline";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
+
+/*
+ * :: Variables ::
+ * 
+ */
 
 const Lesson01 = () => {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div

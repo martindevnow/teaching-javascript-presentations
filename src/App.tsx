@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Lesson01 from "./lesson-01/Lesson01";
 
