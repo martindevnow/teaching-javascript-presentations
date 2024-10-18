@@ -24,8 +24,10 @@
     "start:remotion": "npx remotion studio remotion/index.ts",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "scope-test": "node scripts/scope-test.js"
+    "scope-test": "node scripts/scope-test.js",
+    "types-test": "node scripts/types-test.js",
+    "value-reference-test": "node scripts/value-vs-reference.js",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
