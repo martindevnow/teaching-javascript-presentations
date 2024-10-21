@@ -8,6 +8,7 @@ import {
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import "reveal.js/plugin/highlight/highlight";
+import "reveal.js/plugin/markdown/markdown";
 
 import "./index.css";
 import "./github-dark-dimmed.css";

@@ -5,7 +5,7 @@ import "reveal.js/dist/theme/black.css";
 import CodeBlock from "../atoms/CodeBlock";
 import CodeInline from "../atoms/CodeInline";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
-import Slide from "../atoms/Slide";
+import RevealMarkdown from "reveal.js/plugin/markdown/markdown";
 
 /*
  * :: Variables ::
@@ -27,7 +27,7 @@ const Lesson01 = () => {
 
     deckRef.current
       .initialize({
-        plugins: [RevealHighlight],
+        plugins: [RevealHighlight, RevealMarkdown],
       })
       .then(() => {
         // good place for event handlers and plugin setups
@@ -55,8 +55,12 @@ let obj = {};`;
     // our parent element. Make sure the parent is not 0-height.
     <div className="reveal" ref={deckDivRef}>
       <div className="slides">
-        <Slide>Variables</Slide>
-        <Slide>Variables are little bucket placeholders for data</Slide>
+        <section>Variables</section>
+
+
+        <section>Variables are little bucket placeholders for data</section>
+
+
         <section data-auto-animate>
           <CodeBlock
             id="code-box"
@@ -90,6 +94,8 @@ let obj = {};`;
             <br />
           </span>
         </section>
+
+
         <section data-auto-animate>
           <CodeBlock
             id="code-box"
@@ -98,6 +104,8 @@ let obj = {};`;
           ></CodeBlock>
           Numbers
         </section>
+
+
         <section data-auto-animate>
           <CodeBlock
             id="code-box"
@@ -106,6 +114,8 @@ let obj = {};`;
           ></CodeBlock>
           String
         </section>
+
+
         <section data-auto-animate>
           <CodeBlock
             id="code-box"
