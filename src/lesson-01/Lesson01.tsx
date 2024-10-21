@@ -5,6 +5,7 @@ import "reveal.js/dist/theme/black.css";
 import CodeBlock from "../atoms/CodeBlock";
 import CodeInline from "../atoms/CodeInline";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
+import Slide from "../atoms/Slide";
 
 /*
  * :: Variables ::
@@ -54,13 +55,12 @@ let obj = {};`;
     // our parent element. Make sure the parent is not 0-height.
     <div className="reveal" ref={deckDivRef}>
       <div className="slides">
-        <section>Variables</section>
-        <section>Variables are little bucket placeholders for data</section>
+        <Slide>Variables</Slide>
+        <Slide>Variables are little bucket placeholders for data</Slide>
         <section data-auto-animate>
           <CodeBlock
             id="code-box"
             lineNums="1"
-            lang="js"
             code="let num = 100;"
           ></CodeBlock>
           <p>
@@ -69,23 +69,23 @@ let obj = {};`;
             <br />
           </p>
           <span className="fragment">
-            <CodeInline color="red" lang="js" code="let"></CodeInline> is a
+            <CodeInline color="red" code="let"></CodeInline> is a
             reserved word that is used to tell the compiler we're about to
             create a variable.
             <br />
           </span>
           <span className="fragment">
-            <CodeInline color="green" lang="js" code="num"></CodeInline> is the
+            <CodeInline color="green" code="num"></CodeInline> is the
             name we're giving our variable
             <br />
           </span>
           <span className="fragment">
-            <CodeInline color="blue" lang="js" code="="></CodeInline>is the
+            <CodeInline color="blue" code="="></CodeInline>is the
             assignment operator
             <br />
           </span>
           <span className="fragment">
-            <CodeInline color="purple" lang="js" code="10"></CodeInline> is
+            <CodeInline color="purple" code="10"></CodeInline> is
             value to be assigned to our variable
             <br />
           </span>
@@ -94,7 +94,6 @@ let obj = {};`;
           <CodeBlock
             id="code-box"
             lineNums="1"
-            lang="js"
             code={code1}
           ></CodeBlock>
           Numbers
@@ -103,7 +102,6 @@ let obj = {};`;
           <CodeBlock
             id="code-box"
             lineNums="2"
-            lang="js"
             code={code1}
           ></CodeBlock>
           String
@@ -112,12 +110,11 @@ let obj = {};`;
           <CodeBlock
             id="code-box"
             lineNums="3"
-            lang="js"
             code={code1}
           ></CodeBlock>
           Boolean represent data that is{" "}
-          <CodeInline color="red" lang="js" code="true"></CodeInline>
-          or <CodeInline color="red" lang="js" code="false"></CodeInline>
+          <CodeInline color="red" code="true"></CodeInline>{" "}
+          or <CodeInline color="red" code="false"></CodeInline>
         </section>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
 
-const CodeInline: React.FC<{ color: string; code: string; lang: string }> = ({
+const CodeInline: React.FC<{ color: string; code: string; lang?: string }> = ({
   color,
   code,
-  lang,
+  lang = "js",
 }) => {
   return (
     <code className={`language-${lang}`} style={{ color: color }}>

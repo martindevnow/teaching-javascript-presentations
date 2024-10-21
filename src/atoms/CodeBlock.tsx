@@ -6,7 +6,7 @@ const CodeBlock: React.FC<{
   lang?: string;
   code: string;
   className?: string;
-}> = ({ id, lineNums, lang, code, className }) => {
+}> = ({ id, lineNums, lang = "js", code, className }) => {
   return (
     <pre>
       <code
