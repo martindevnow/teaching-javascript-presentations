@@ -13,20 +13,32 @@ import "reveal.js/plugin/markdown/markdown";
 import "./index.css";
 import "./github-dark-dimmed.css";
 
-import Lesson01 from "./lesson-01/Lesson01";
-import TableOfContents from "./TableOfContents";
-import Lesson02 from "./lesson-02/Lesson02";
-import Lesson03 from "./lesson-03/Lesson03";
+import TableOfContents from "./home/TableOfContents";
+import Lesson01 from "./presentations/module-01-variables/Lesson01-primitives";
+import Lesson02 from "./presentations/module-01-variables/Lesson02-arrays-and-objects";
+import Lesson03 from "./presentations/module-01-variables/Lesson03";
+import { PresentationRoutes } from "./presentations";
+import ErrorPage from "./ErrorPage";
+import Module from "./atoms/Module";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <TableOfContents />,
+    errorElement: <ErrorPage />,
   },
+  ...PresentationRoutes,
   {
-    path: "/lesson-01",
-    element: <Lesson01 />,
+    path: "/module-01",
+    element: <Module />,
+    children: [
+      {
+        path: "lesson-01",
+        element: <Lesson01 />,
+      },
+    ]
   },
+
   {
     path: "/lesson-02",
     element: <Lesson02 />,
