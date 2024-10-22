@@ -27,12 +27,16 @@
   const undef = () => {
     let un;
     let und = undefined;
+    let name = "ben";
+    name = undefined;
 
     console.log(":: Undefined ::");
     console.log(un);
     console.log(und);
+    console.log(name);
     console.log(typeof un);
     console.log(typeof und);
+    console.log(typeof name);
   };
 
   const nullType = () => {

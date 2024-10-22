@@ -48,14 +48,9 @@ let joined = "Hello " + lastName;`;
   const bool = `let isHappy = true;
 let isHonest = false;`;
 
-  const truthy = `// Truthy
-let truthyValues = [1, "1", 1n, [], {}, Infinity, 0b1, 0x1];
 
-// Falsy
-let falsyValues = [0, "", 0n, null, undefined, 0b0, 0x0];`
 
   const nullAndUndef = `let age; // default to undefined
-let name = undefined;
 let school = null;`
 
   return (
@@ -63,9 +58,12 @@ let school = null;`
     // our parent element. Make sure the parent is not 0-height.
     <div className="reveal" ref={deckDivRef}>
       <div className="slides">
+
+
         <section>
           <h1>Variables</h1>
         </section>
+
 
 
         <section>
@@ -82,6 +80,7 @@ let school = null;`
         </section>
 
 
+
         <section>
           Declaration and Initialization
           <CodeBlock code="let age = 35;" />
@@ -96,6 +95,8 @@ let school = null;`
             "35" is the value we're putting in the box<br />
           </Notes>
         </section>
+
+
 
         <section>
           Declaration without Initialization
@@ -117,12 +118,9 @@ age = 35; `} />
 
 
 
-
         <section>
           <h2>Data Types</h2>
         </section>
-
-
 
 
 
@@ -147,6 +145,7 @@ age = 35; `} />
         </section>
 
 
+
         <section data-auto-animate>
           <h3>Simple Examples</h3>
           <CodeBlock
@@ -155,12 +154,14 @@ age = 35; `} />
 
           <Notes>
             Here are some example variables declarations and initializations.<br />
-            Some aspects of this variables are implicit and others are explicit.<br />
+            Some aspects of these variables are implicit and others are explicit.<br />
             <br />
             We are explicitly setting the `name`s and `value`s <br />
             However, we are implicitly telling JavaScript that the `type` for these variables<br />
           </Notes>
         </section>
+
+
 
         <section data-auto-animate>
           <h3>Numbers</h3>
@@ -186,6 +187,7 @@ age = 35; `} />
         </section>
 
 
+
         <section data-auto-animate>
           <h3>Big Int</h3>
           <CodeBlock
@@ -194,10 +196,11 @@ age = 35; `} />
 
           <Notes>
             The BigInt type allows us to have accurate arithmetic beyond the MAX_SAFE_INTEGER<br />
-            However, these can only be integers; no decimals.<br />
+            However, these can only be integers; not decimals.<br />
             All the previous number notations are also supported with the `BigInt()` constructor
           </Notes>
         </section>
+
 
 
         <section data-auto-animate>
@@ -214,6 +217,7 @@ age = 35; `} />
         </section>
 
 
+
         <section data-auto-animate>
           <h3>Boolean</h3>
           <CodeBlock
@@ -228,27 +232,24 @@ age = 35; `} />
         </section>
 
 
-        <section data-auto-animate>
-          <h3>Truthy/Falsy</h3>
-          <CodeBlock id="code-box" lineNumbers code={truthy} />
-
-          <Notes>
-            Basically, any non-empty, non-zero value will evaluate to truthy. Everything else will evaluate to falsy.<br /><br />
-            - "0" is a unique case. Although it is 0, it is a string with a value, so it is truthy.
-          </Notes>
-        </section>
 
 
         <section data-auto-animate>
           <h3>Null and Undefined</h3>
           <CodeBlock id="code-box" lineNumbers code={nullAndUndef} />
 
+          <h3>Clearing Variables</h3>
+          <CodeBlock lineNumbers code={`let age = 10;
+age = undefined;`} />
+
           <Notes>
-            undefined is for variables that have been declared but not initialized.<br /><br />
-            Null implies it was intentionally left blank/empty<br /><br />
-            Note that Functions which do not return any value will implicitly return undefined.
+            undefined is for variables that have been declared but not initialized.<br />
+            null is used explicitly to imply that a variable was intentionally left blank/empty<br />
+            <br />
+            While it is possible to assign a variable to undefined, it won't be obvious that this was intentional given JS's default behaviour
           </Notes>
         </section>
+
 
 
         <section>
@@ -268,10 +269,12 @@ age = 35; `} />
         </section>
 
 
+
         <section>
           <h2>Up Next...</h2>
           Arrays and Objects!
         </section>
+
 
       </div>
     </div >

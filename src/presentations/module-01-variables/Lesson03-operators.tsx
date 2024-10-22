@@ -1,6 +1,7 @@
 import React from 'react'
 import useSlideshow from '../../hooks/useSlideshow';
 import CodeBlock from '../../atoms/CodeBlock';
+import Notes from '../../atoms/Notes';
 
 const Lesson03 = () => {
   const [deckDivRef] = useSlideshow();
@@ -10,7 +11,7 @@ a = 2 - 1; // Subtraction
 a = 10 * 2; // Multiplication
 a = 10 / 5; // Division
 a = 10 ** 2; // Exponent (Power of..)
-a = 10 % 3; // Modulo (Remainder)`;
+a = 10 % 3; // Remainder`;
 
 
   const assignment = `let a = 10; // Assignment
@@ -38,6 +39,27 @@ bool = true ? "true" : "false"; // Ternary`;
   const logical = `let bool = true && true; // AND
 bool = true || false; // OR
 bool = !false; // NOT`
+
+  /**\
+   * , comma
+   * + unary plus
+   * ! not
+   * ( ) grouping
+   * typeof
+   * instanceof
+   * ?? nullish coalescing
+   * ??= 
+   * ... spread
+   */
+
+  const otherUnary = ``;
+
+
+  const truthy = `// Truthy
+let truthyValues = [1, "1", "0", 1n, [], {}, Infinity, 0b1, 0x1];
+
+// Falsy
+let falsyValues = [0, "", 0n, null, undefined, 0b0, 0x0];`
 
   return (
     <div className="reveal" ref={deckDivRef}>
@@ -69,6 +91,20 @@ bool = !false; // NOT`
           <h2>logical</h2>
           <CodeBlock code={logical}></CodeBlock>
         </section>
+
+
+
+        <section data-auto-animate>
+          <h3>Truthy/Falsy</h3>
+          <CodeBlock id="code-box" lineNumbers code={truthy} />
+
+          <Notes>
+            Basically, any non-empty, non-zero value will evaluate to truthy. Everything else will evaluate to falsy.<br /><br />
+            - "0" is a unique case. Although it is 0, it is a string with a value, so it is truthy.
+          </Notes>
+        </section>
+
+
       </div>
     </div>
   )
