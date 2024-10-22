@@ -1,6 +1,6 @@
 import Lesson01 from './Lesson01-primitives'
 import Lesson02 from './Lesson02-arrays-and-objects'
-import Lesson03 from './Lesson03'
+import Lesson03 from './Lesson03-operators'
 
 export const Module01Routes = [
   {

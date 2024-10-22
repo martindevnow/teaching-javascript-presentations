@@ -16,7 +16,7 @@ import "./github-dark-dimmed.css";
 import TableOfContents from "./home/TableOfContents";
 import Lesson01 from "./presentations/module-01-variables/Lesson01-primitives";
 import Lesson02 from "./presentations/module-01-variables/Lesson02-arrays-and-objects";
-import Lesson03 from "./presentations/module-01-variables/Lesson03";
+import Lesson03 from "./presentations/module-01-variables/Lesson03-operators";
 import { PresentationRoutes } from "./presentations";
 import ErrorPage from "./ErrorPage";
 import Module from "./atoms/Module";
