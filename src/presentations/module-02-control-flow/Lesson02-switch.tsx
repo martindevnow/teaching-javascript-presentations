@@ -3,37 +3,11 @@ import useSlideshow from '../../hooks/useSlideshow';
 import Notes from '../../atoms/Notes';
 import CodeBlock from '../../atoms/CodeBlock';
 
-const Lesson01 = () => {
+const Lesson02 = () => {
   const [deckDivRef] = useSlideshow();
 
 
-  const ifOnly = `if (/* condition */) {
-  // code to execute if true
-}`
 
-  const ifelse = `if (/* condition expression */) {
-  // code to execute when true
-} else {
-  // code to execute when false
-}`;
-
-  const ifElseExample = `let age = 19;
-if (age < 21) {
-  console.log('deny service'); // this will be executed
-} else {
-  console.log('welcome!'); // this will be skipped
-}`
-
-
-  const ifElseIf = `let age = 19;
-if (age < 10) {
-  console.log("it's your bed time");
-} else if (age < 21) {
-  console.log("Sorry, go away");
-} else {
-  console.log("Welcome!");
-}
-`
   const switchStmt = `let car = {color: 'red'};
 switch (car.color) {
   case 'blue':
@@ -81,26 +55,6 @@ while (i < 10) {
         </section>
 
 
-        <section>
-          <h2>IF</h2>
-
-          <CodeBlock lineNumbers code={ifOnly} />
-        </section>
-
-        <section>
-          <h2>If + Else</h2>
-          <CodeBlock lineNumbers code={ifelse} />
-
-          <h3>Example</h3>
-          <CodeBlock lineNumbers code={ifElseExample} />
-        </section>
-
-        <section>
-
-          <h2>If + Else If</h2>
-          <CodeBlock lineNumbers code={ifElseIf} />
-        </section>
-
 
         <section>
           <h2>Switch</h2>
@@ -125,4 +79,4 @@ while (i < 10) {
   )
 }
 
-export default Lesson01
+export default Lesson02

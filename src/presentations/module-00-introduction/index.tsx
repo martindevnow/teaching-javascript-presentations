@@ -1,5 +1,5 @@
-import Lesson01 from './Lesson01'
-import Lesson02 from './Lesson02'
+import Lesson01 from './Lesson01-welcome'
+import Lesson02 from './Lesson02-why-javascript'
 
 export const Module00Routes = [
   {
