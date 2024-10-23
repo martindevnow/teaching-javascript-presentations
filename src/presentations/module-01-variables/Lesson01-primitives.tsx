@@ -254,6 +254,7 @@ age = undefined;`} />
         </section>
 
 
+
         <section>
           <h2>Let</h2>
           <CodeBlock code={letExample} />
@@ -285,12 +286,13 @@ age = undefined;`} />
           Use const for variables that should remain unchanged, such as object property names or configuration settings.
         </section>
 
+
+
         <section>
           <h2>Summary</h2>
 
           Primitive variables store values in memory to be used later in our code<br />
           Data types are inferred in JavaScript based on the value assigned to the variable<br />
-
         </section>
 
 

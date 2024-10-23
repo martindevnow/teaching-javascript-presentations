@@ -7,39 +7,45 @@ import Notes from "../../atoms/Notes";
 const Lesson02 = () => {
   const [deckDivRef] = useSlideshow(); // reference to deck container div
 
-  const arrays = `let arr = [];
-let arr2 = new Array(10);
-let arr3 = Array.of(0, 5, 10, 15);`;
+  const objDefinition = `let person = { name: 'John', age: 30 };`;
+  const objPropertyAccess = `let name = person.name; // "John"`;
+  const objPropertyUpdates = `person.email = 'john@example.com';
+delete person.age;`;
+  const objPrototypes = `let Animal = { sound: ' generic animal sound' };
+let Dog = { __proto__: Animal, sound: 'Woof!' };`;
 
-  const arrayIndex0 = `let arr = [10, 20, 25];
-console.log(arr[0]); //     Prints: "10"
-console.log(arr.length); // Prints: "3"`;
+  const objPropertyOrder = `let person = { name: 'John', age: 30 };
+console.log(Object.keys(person)); // ["age", "name"]`;
+  const objShallowCopy = `let original = { x: 1, y: 2 };
+let copy = original;
 
-  const arraysResizable = `let arr = [10, 20, 25];
-console.log(arr[0]); //     Prints: "10"
-console.log(arr.length); // Prints: "3"
-arr[3] = 30;
-console.log(arr.length); // Prints "4"
-arr[9] = 100;
-console.log(arr.length); // Prints "10
-console.log(arr[8]); //     Prints "undefined"`;
+copy.x = 10;
+console.log(original); // { x: 10, y: 2 }`;
 
-  const arrayAccess = `let arr = [10, 20, 25];
-console.log(arr[0]); //     Prints: "10"
-console.log(arr["0"]); //   Prints: "10"
-console.log(arr["ten"]); // Prints "undefined"`;
+  const objDeepCopy = `let original = { x: 1, y: 2 };
+let copy = JSON.parse(JSON.stringify(original));
 
-  const arrayCopy = `// Create an original array with objects
-let arr = [
-  { id: 1, name: "John" },
-  { id: 2, name: "Jane" },
-];
+copy.x = 10;
+console.log(original); // { x: 1, y: 2 }`;
 
-let copiedArr = arr.slice(); // Copy Array
-arr[0].name = "New John"; //    Modify first object
+  const objCopying = `let obj = {
+    car: { color: "red" },
+    cash: 100,
+  };
 
-console.log("Copied Array:", copiedArr); // New array
-console.log("Original Array:", arr); // arr[0] was modified`;
+  let refObj = obj;
+  let shallowCopy = { ...obj };
+  let deepCopy = JSON.parse(JSON.stringify(obj));
+
+  refObj.cash = 0;
+  console.log(obj); // cash = 0
+  console.log(shallowCopy); // cash = 100
+  console.log(deepCopy); // cash = 100
+
+  obj.car.color = "blue";
+  console.log(obj); // car.color = "blue"
+  console.log(shallowCopy); // car.color = "blue"
+  console.log(deepCopy); // car.color = "red"`;
 
   return (
     <div className="reveal" ref={deckDivRef}>
@@ -48,63 +54,89 @@ console.log("Original Array:", arr); // arr[0] was modified`;
 
         <section>
           <h1>Variables</h1>
-          <h2>Arrays and Objects</h2>
+          <h2>Objects</h2>
         </section>
 
 
 
         <section>
-          <h3>Arrays</h3>
-          <CodeBlock lineNumbers code={arrays} />
-
+          <h2>Basic Syntax</h2>
+          <CodeBlock code={objDefinition} />
           <Notes>
-            Arrays are putting a box around a box.
+
           </Notes>
         </section>
 
 
 
         <section>
-          <h2>Array Index</h2>
-          <CodeBlock code={arrayIndex0} />
-          First index is `0`
-
+          <h2>Accessing Properties</h2>
+          <CodeBlock code={objDefinition + "\n" + objPropertyAccess} />
           <Notes>
-            Arrays have their first index at 0
-          </Notes>
-        </section>
 
-
-        <section>
-          <h3>Size</h3>
-          <CodeBlock code={arraysResizable} />
-
-          <Notes>
-            Arrays are resizable.<br />
-            New elements can be added at any non-negative integer index<br />
           </Notes>
         </section>
 
 
 
         <section>
-          <h3>Array Access</h3>
-
-          <CodeBlock code={arrayAccess} />
+          <h2>Updating Properties</h2>
+          <CodeBlock code={objDefinition + "\n" + objPropertyAccess + "\n" + objPropertyUpdates} />
           <Notes>
-            By index only, number or string (that can be coerced to number)
+
           </Notes>
         </section>
+
 
 
         <section>
-          <h3>Array Copy</h3>
-
-          <CodeBlock code={arrayCopy} />
+          <h2>Object Prototype</h2>
+          <CodeBlock code={objPrototypes} />
           <Notes>
-            Shallow Copy
+
           </Notes>
         </section>
+
+
+
+        <section>
+          <h2>Property Order</h2>
+          <CodeBlock code={objPropertyOrder} />
+          <Notes>
+
+          </Notes>
+        </section>
+
+
+
+        <section>
+          <h2>Variable by Reference</h2>
+          <CodeBlock code={objShallowCopy} />
+          <Notes>
+
+          </Notes>
+        </section>
+
+
+
+        <section>
+          <h2>Deep Copy</h2>
+          <CodeBlock code={objDeepCopy} />
+          <Notes>
+
+          </Notes>
+        </section>
+
+
+
+        <section>
+          <h2>Copying Example</h2>
+          <CodeBlock code={objCopying} />
+          <Notes>
+
+          </Notes>
+        </section>
+
 
       </div>
     </div>

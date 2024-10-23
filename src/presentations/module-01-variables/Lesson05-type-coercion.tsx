@@ -78,11 +78,13 @@ console.log(+"hello"); // NaN`
         </section>
 
 
+
         <section>
           <h3>TYPEOF</h3>
 
           <CodeBlock code={typeofKeyword} />
         </section>
+
 
 
         <section>
@@ -106,6 +108,7 @@ console.log(+"hello"); // NaN`
             In many cases, you'll want to handle NaN values differently than actual numbers. For example, you might display an error message or re-try the calculation with valid input.<br />
           </Notes>
         </section>
+
 
 
         <section>

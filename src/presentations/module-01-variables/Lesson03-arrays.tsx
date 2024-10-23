@@ -78,6 +78,7 @@ console.log("Original Array:", arr); // arr[0] was modified`;
         </section>
 
 
+
         <section>
           <h3>Size</h3>
           <CodeBlock code={arraysResizable} />
@@ -98,6 +99,7 @@ console.log("Original Array:", arr); // arr[0] was modified`;
             By index only, number or string (that can be coerced to number)
           </Notes>
         </section>
+
 
 
         <section>

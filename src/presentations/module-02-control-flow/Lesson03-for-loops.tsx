@@ -59,6 +59,7 @@ for (const color in colors) {
         </section>
 
 
+
         <section>
           <h2>For loops</h2>
           TODO: Insert Image
@@ -109,6 +110,7 @@ for (const color in colors) {
         </section>
 
 
+
         <section>
           <h2>Multiple Variables</h2>
           <CodeBlock code={multipleInitialization} />
@@ -118,6 +120,7 @@ for (const color in colors) {
             This is useful when you need to keep track of multiple values that change at different rates.<br />
           </Notes>
         </section>
+
 
 
         <section>
@@ -131,6 +134,7 @@ for (const color in colors) {
         </section>
 
 
+
         <section>
           <h2>For - In (object)</h2>
           <CodeBlock code={forInObject} />
@@ -140,6 +144,7 @@ for (const color in colors) {
             The syntax is for (const variable in object) &#123; code &#125;, where variable takes on the value of each property name.<br />
           </Notes>
         </section>
+
 
 
         <section>
