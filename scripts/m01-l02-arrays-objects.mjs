@@ -3,6 +3,11 @@ void (function () {
   let arr = [];
   let arr2 = new Array(10);
   let arr3 = Array.of(0, 5, 10, 15);
+
+  //
+  console.log(arr);
+  console.log(arr2);
+  console.log(arr3);
 })();
 
 void (function () {

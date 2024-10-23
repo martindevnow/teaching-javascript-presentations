@@ -18,13 +18,6 @@ const Lesson03 = () => {
 }`
 
 
-  const whileLoop = `let i = 0;
-while (i < 10) {
-  console.log(\`Iteration \${i}\`);
-  if (i == 5) break;
-  i++;
-}`
-
 
   return (
     <div className="reveal" ref={deckDivRef}>
