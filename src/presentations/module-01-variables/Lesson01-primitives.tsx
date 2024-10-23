@@ -13,44 +13,44 @@ import Notes from "../../atoms/Notes";
 const Lesson01 = () => {
   const [deckDivRef] = useSlideshow(); // reference to deck container div
 
-  const supportedTypes = `let age = 35 // number; 
-let hugeNum = 9e99n; // 9 x 10 ^ 99 as BigInt
-let greeting = "Hello world"; // string
-let isLoaded = true; // boolean
-let toys; // undefined 
-let empty = null; // null
-let car = { color: 'red' }; // object
-let colors: ['red', 'blue', 'yellow']; // array
-let sym = Symbol('sym');`;
+  const supportedTypes = `let age = 35; //                            number
+let hugeNum = 9999999999999999999n; //      BigInt
+let greeting = "Hello world"; //            string
+let isLoaded = true; //                     boolean
+let toys; //                                undefined
+let empty = null; //                        null
+let car = { color: "red" }; //              object
+let colors = ["red", "blue", "yellow"]; //  array
+let sym = Symbol("sym"); //                 symbol`;
 
 
-  const looseTypes = `let age = 35; // number
+  const looseTypes = `let yourAge = 35; //         number
 // ... later in the code
-age = "35 years old"; // string`
+yourAge = "35 years old"; // string`;
 
 
-  const numbers = `let age = 35; // years
-let price = 10.99; // dollars
-let c = 3.0e8; // speed of light
-let hex = 0xff; // 255
-let binary = 0b11111111; // 255
-let max = Number.MAX_SAFE_INTEGER; 
-    // (2^53 - 1 == 9007199254740991)`
+  const numbers = `let age = 35; //            integer
+let price = 10.99; //       double/float
+let c = 3.0e8; //           exponent
+let hex = 0xff; //          hexadecimal
+let binary = 0b11111111; // binary
+let max = Number.MAX_SAFE_INTEGER;
+      // (2^53 - 1 == 9007199254740991)`
 
   const bigInt = `let max_safe = 9007199254740991n;
-let massive = BigInt(999999999999999999999999999999999999);
+let massive = BigInt(99999999999999999999999999);
 let huge = 99999999999999999999999999n;`;
 
 
-  const strings = `let name = "Ben's Pizza Place";
-let lastName = 'Martin';
-let literal = \`My name is \${lastName}!\`
+  const strings = `let name = "Ben's Pizza Place"; // double quotes
+let lastName = "Martin"; // single quotes
+let literal = \`My name is \${lastName}!\`; // back ticks
 let phone = "555-1234";
 
 let escaped = 'He\\'s my friend';
 let escaped2 = "He said \\"Hello\\" to me.";
 
-let joined = "Hello " + lastName;`;
+let joined = "Hello " + lastName; // concat`;
 
 
   const bool = `let isHappy = true;
@@ -58,7 +58,7 @@ let isHonest = false;`;
 
 
 
-  const nullAndUndef = `let age; // default to undefined
+  const nullAndUndef = `let hisAge; // default to undefined
 let school = null;`
 
   return (

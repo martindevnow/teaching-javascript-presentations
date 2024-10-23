@@ -1,7 +1,14 @@
 void (function () {
+  console.log(":: ARRAYS ::");
+  let arr = [];
+  let arr2 = new Array(10);
+  let arr3 = Array.of(0, 5, 10, 15);
+})();
+
+void (function () {
   console.log(":: ARRAYS INDEX 0 ::");
   let arr = [10, 20, 25];
-  console.log(arr[0]); // Prints: "10"
+  console.log(arr[0]); //     Prints: "10"
   console.log(arr.length); // Prints: "3"
 })();
 
