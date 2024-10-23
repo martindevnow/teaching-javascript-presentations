@@ -66,8 +66,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - Installing VSCode
 - Running Node Locally
 - Intro to NPM and looking up packages
-- Basic Syntax
-  - Reserved Words
 
 # Module: Writing Code
 

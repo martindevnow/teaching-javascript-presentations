@@ -71,6 +71,18 @@ Boolean(1);`
         </section>
 
 
+        <section>
+          <h3>TYPEOF</h3>
+
+          <CodeBlock code={typeofKeyword} />
+        </section>
+
+
+        <section>
+          <h3>Primitive Constructors</h3>
+          <CodeBlock code={primitiveConstructors} />
+        </section>
+
       </div>
     </div>
   )

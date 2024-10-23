@@ -1,0 +1,6 @@
+/**
+ * nvm
+ * vscode
+ * node
+ * npm
+ */
