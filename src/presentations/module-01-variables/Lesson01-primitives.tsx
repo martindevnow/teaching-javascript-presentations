@@ -13,15 +13,21 @@ import Notes from "../../atoms/Notes";
 const Lesson01 = () => {
   const [deckDivRef] = useSlideshow(); // reference to deck container div
 
-  const examples = `let age = 35; 
-let greeting = "Hello world"; 
-let isLoaded = true; 
+  const supportedTypes = `let age = 35 // number; 
+let hugeNum = 9e99n; // 9 x 10 ^ 99 as BigInt
+let greeting = "Hello world"; // string
+let isLoaded = true; // boolean
 let toys; // undefined 
-let car = null;`;
+let empty = null; // null
+let car = { color: 'red' }; // object
+let colors: ['red', 'blue', 'yellow']; // array
+let sym = Symbol('sym');`;
+
 
   const looseTypes = `let age = 35; // number
 // ... later in the code
 age = "35 years old"; // string`
+
 
   const numbers = `let age = 35; // years
 let price = 10.99; // dollars
@@ -29,11 +35,12 @@ let c = 3.0e8; // speed of light
 let hex = 0xff; // 255
 let binary = 0b11111111; // 255
 let max = Number.MAX_SAFE_INTEGER; 
-    // (2^53 - 1 == 9007199254740991)
-`
+    // (2^53 - 1 == 9007199254740991)`
+
   const bigInt = `let max_safe = 9007199254740991n;
 let massive = BigInt(999999999999999999999999999999999999);
 let huge = 99999999999999999999999999n;`;
+
 
   const strings = `let name = "Ben's Pizza Place";
 let lastName = 'Martin';
@@ -44,6 +51,7 @@ let escaped = 'He\\'s my friend';
 let escaped2 = "He said \\"Hello\\" to me.";
 
 let joined = "Hello " + lastName;`;
+
 
   const bool = `let isHappy = true;
 let isHonest = false;`;
@@ -124,35 +132,17 @@ age = 35; `} />
 
 
 
-        <section>
-          <h2>Supported Types</h2>
-          <ol>
-            <li>number</li>
-            <li>BigInt</li>
-            <li>string</li>
-            <li>boolean</li>
-            <li>undefined</li>
-            <li>null</li>
-            <li>object (& array)</li>
-            <li>symbol</li>
-          </ol>
+        <section data-auto-animate>
+          <h3>Supported Types</h3>
+          <CodeBlock
+            id="code-box"
+            code={supportedTypes} />
 
           <Notes>
             JavaScript supports a number of primitive data types out of the box<br />
             Although this list is not completely exhaustive, it will serve our purposes of getting more familiar with data types in JavaScript<br />
-            In this section we will only focus on the first 6 and save objects and symbols for a future lecture
-          </Notes>
-        </section>
-
-
-
-        <section data-auto-animate>
-          <h3>Simple Examples</h3>
-          <CodeBlock
-            id="code-box"
-            code={examples} />
-
-          <Notes>
+            In this section we will only focus on the first 6 and save objects and symbols for a future lecture<br />
+            <br />
             Here are some example variables declarations and initializations.<br />
             Some aspects of these variables are implicit and others are explicit.<br />
             <br />
@@ -227,7 +217,9 @@ age = 35; `} />
           ></CodeBlock>
 
           <Notes>
-            Boolean is true or false. Other values can evaluate to "truthy" or "falsy"
+            Boolean explicitly represents true or false. <br />
+            Other values can be "coerced" to a boolean from a "truthy" or "falsy" value but we will look at this  <br />
+            <br />
           </Notes>
         </section>
 

@@ -39,7 +39,13 @@ bool = 10 !== "10"; // Not Equal (Strict)`;
 bool = true || false; // OR
 bool = !false; // NOT`
 
-  const ternary = `let bool = true ? "true" : "false"; // Ternary`;
+  const ternary = `let variable = ( /* condition */ ? /* value if true */ : /* value if false */ );
+let bool = (true ? "true" : "false"); // Ternary
+let variable = condition1 ? value1
+    : condition2 ? value2
+    : condition3 ? value3
+    : value4; // ternary operators can be chained together
+`;
 
   /**\
    * ( ) grouping
@@ -123,6 +129,13 @@ val = !! ""; // false
         <section>
           <h3>Changing Type</h3>
           <CodeBlock id="code-box" lineNumbers code={castingToNumber} />
+          "Type Coercion"
+
+          <Notes>
+            This is a type of type coercion. <br />
+            JavaScript will try to convert the operand to a number with its best guess.<br />
+            We also see this on the next slide with boolean values.
+          </Notes>
         </section>
 
 
@@ -132,6 +145,7 @@ val = !! ""; // false
           <CodeBlock id="code-box" lineNumbers code={truthy} />
 
           <Notes>
+            Using the "double not"
             Basically, any non-empty, non-zero value will evaluate to truthy. Everything else will evaluate to falsy.<br /><br />
             - "0" is a unique case. Although it is 0, it is a string with a value, so it is truthy.
           </Notes>
@@ -142,6 +156,11 @@ val = !! ""; // false
         <section>
           <h3>Double Not</h3>
           <CodeBlock id="code-box" lineNumbers code={doubleNot} />
+          "Type Coercion"
+
+          <Notes>
+            Using the information from the previous slide, JavaScript will convert the truthy values to true and falsy values to false.
+          </Notes>
         </section>
 
 
@@ -149,6 +168,11 @@ val = !! ""; // false
         <section data-auto-animate>
           <h3>Ternary</h3>
           <CodeBlock id="code-box" lineNumbers code={ternary} />
+
+          <Notes>
+            This is basically a short hand for an `if-else` block that we will explore deeper in the next module.<br />
+            This is
+          </Notes>
         </section>
 
 
