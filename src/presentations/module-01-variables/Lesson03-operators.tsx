@@ -6,46 +6,52 @@ import Notes from '../../atoms/Notes';
 const Lesson03 = () => {
   const [deckDivRef] = useSlideshow();
 
-  const mathematical = `let a = 1 + 2; // Addition
-a = 2 - 1; // Subtraction
-a = 10 * 2; // Multiplication
-a = 10 / 5; // Division
+  const mathematical = `let a;
+a = 1 + 2; //   Addition
+a = 2 - 1; //   Subtraction
+a = 10 * 2; //  Multiplication
+a = 10 / 5; //  Division
 a = 10 ** 2; // Exponent (Power of..)
-a = 10 % 3; // Remainder`;
+a = 10 % 3; //  Remainder`;
 
 
-  const assignment = `let a = 10; // Assignment
+  const assignment = `let a = 10; // Basic Assignment
 let b = 5;
-a ++; // Increment by 1
-a --; // Decrement by 1
-a += b; // Increment by "b"
-a -= b; // Decrement by "b"
-a *= b; // Set a to a * b
-a /= b; // Set a to a / b
+a++; //     Increment by 1
+a--; //     Decrement by 1
+a += b; //  Increment by "b"
+a -= b; //  Decrement by "b"
+a *= b; //  Set a to a * b
+a /= b; //  Set a to a / b
 a **= b; // Set a to a to the power of b
-a %= b; // Set a to the remainder of a / b;`;
+a %= b; //  Set a to the remainder of a / b`;
 
 
-  const comparison = `let bool = 6 < 10; // Less Than
-bool = 6 <= 10;     // Less than or Equal
-bool = 10 > 6;      // Greater than
-bool = 10 >= 6;     // Greater than or Equal
-bool = 10 == "10";  // Equal (Loose)
-bool = 10 === 10;   // Equal (Strict)
-bool = 10 != "11";  // Not Equal (Loose)
-bool = 10 !== "10"; // Not Equal (Strict)`;
+  const comparison = `let bool = 6 < 10; //   Less Than
+bool = 6 <= 10; //      Less than or Equal
+bool = 10 > 6; //       Greater than
+bool = 10 >= 6; //      Greater than or Equal
+bool = 10 == "10"; //   Equal (Loose)
+bool = 10 === 10; //    Equal (Strict)
+bool = 10 != "11"; //   Not Equal (Loose)
+bool = 10 !== "10"; //  Not Equal (Strict)`;
 
   const logical = `let bool = true && true; // AND
-bool = true || false; // OR
-bool = !false; // NOT`
+bool = true || false; //    OR
+bool = !false; //           NOT`
 
-  const ternary = `let variable = ( /* condition */ ? /* value if true */ : /* value if false */ );
-let bool = (true ? "true" : "false"); // Ternary
-let variable = condition1 ? value1
-    : condition2 ? value2
-    : condition3 ? value3
-    : value4; // ternary operators can be chained together
-`;
+  const ternary = `// Syntax :: <condition> ? <value-if-true> : <value-if-false>
+let age = 19;
+let drink = age < 21 ? "Juice" : "Cocktail"; // Ternary
+
+// Chaining Ternary
+let variable2 = condition1
+  ? value1
+  : condition2
+  ? value2
+  : condition3
+  ? value3
+  : value4;`;
 
   /**\
    * ( ) grouping
@@ -56,29 +62,27 @@ let variable = condition1 ? value1
    */
 
   const castingToNumber = `let value = +"30"; // Convert to 30
-value = +true // 1
-value = +false // 0
-value = +null // 0
-value = +[] // 0
-value = + (a) => a; // NaN`;
+value = +true; //     1
+value = +false; //    0
+value = +null; //     0
+value = +[]; //       0
+value = +((a) => a); // NaN`;
 
 
   const nullish = `let something = null ?? "default";
-let car = {color: "blue"};
-car.speed ??= 10; // set to 10
+
+// Object Properties
+let car = { color: "blue" };
+car.speed ??= 10; //    set to 10
 car.color ??= "red"; // stays as "blue"`;
 
-  const truthy = `// Truthy
-let truthyValues = [1, "1", "0", 1n, [], {}, Infinity, 0b1, 0x1];
-
-// Falsy
+  const truthy = `let truthyValues = [1, "1", "0", 1n, [], {}, Infinity, 0b1, 0x1];
 let falsyValues = [0, "", 0n, null, undefined, 0b0, 0x0];`
 
-  const doubleNot = `let val = !! "word"; // true
-val = !! 100; // true
-val = !! 0; // false
-val = !! ""; // false
-`
+  const doubleNot = `let val = !!"word"; //  true
+  val = !!100; //         true
+  val = !!0; //           false
+  val = !!""; //          false`;
 
   return (
     <div className="reveal" ref={deckDivRef}>
