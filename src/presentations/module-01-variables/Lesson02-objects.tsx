@@ -47,7 +47,8 @@ console.log("Original Array:", arr); // arr[0] was modified`;
 
 
         <section>
-          <h1>Arrays and Objects</h1>
+          <h1>Variables</h1>
+          <h2>Arrays and Objects</h2>
         </section>
 
 

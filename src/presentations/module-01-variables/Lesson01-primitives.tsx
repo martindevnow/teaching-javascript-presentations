@@ -1,14 +1,6 @@
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css";
 import CodeBlock from "../../atoms/CodeBlock";
-import useSlideshow from "../../hooks/useSlideshow";
 import Notes from "../../atoms/Notes";
-
-
-/*
- * :: Variables ::
- * 
- */
+import useSlideshow from "../../hooks/useSlideshow";
 
 const Lesson01 = () => {
   const [deckDivRef] = useSlideshow(); // reference to deck container div
@@ -19,15 +11,11 @@ let greeting = "Hello world"; //            string
 let isLoaded = true; //                     boolean
 let toys; //                                undefined
 let empty = null; //                        null
-let car = { color: "red" }; //              object
-let colors = ["red", "blue", "yellow"]; //  array
 let sym = Symbol("sym"); //                 symbol`;
-
 
   const looseTypes = `let yourAge = 35; //         number
 // ... later in the code
 yourAge = "35 years old"; // string`;
-
 
   const numbers = `let age = 35; //            integer
 let price = 10.99; //       double/float
@@ -41,7 +29,6 @@ let max = Number.MAX_SAFE_INTEGER;
 let massive = BigInt(99999999999999999999999999);
 let huge = 99999999999999999999999999n;`;
 
-
   const strings = `let name = "Ben's Pizza Place"; // double quotes
 let lastName = "Martin"; // single quotes
 let literal = \`My name is \${lastName}!\`; // back ticks
@@ -52,11 +39,8 @@ let escaped2 = "He said \\"Hello\\" to me.";
 
 let joined = "Hello " + lastName; // concat`;
 
-
   const bool = `let isHappy = true;
 let isHonest = false;`;
-
-
 
   const nullAndUndef = `let hisAge; // default to undefined
 let school = null;`
@@ -70,6 +54,7 @@ let school = null;`
 
         <section>
           <h1>Variables</h1>
+          <h2>Primitives</h2>
         </section>
 
 
@@ -225,7 +210,6 @@ age = 35; `} />
 
 
 
-
         <section data-auto-animate>
           <h3>Null and Undefined</h3>
           <CodeBlock id="code-box" lineNumbers code={nullAndUndef} />
@@ -263,8 +247,11 @@ age = undefined;`} />
 
 
         <section>
-          <h2>Up Next...</h2>
-          Arrays and Objects!
+          <h2>Summary</h2>
+
+          Primitive variables store values in memory to be used later in our code
+          Data types are inferred in JavaScript based on the value assigned to the variable
+
         </section>
 
 
