@@ -4,11 +4,6 @@ import useSlideshow from "../../hooks/useSlideshow";
 import CodeBlock from "../../atoms/CodeBlock";
 import Notes from "../../atoms/Notes";
 
-/**
- * :: Arrays and Objects
- * 
- */
-
 const Lesson02 = () => {
   const [deckDivRef] = useSlideshow(); // reference to deck container div
 
