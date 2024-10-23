@@ -28,6 +28,13 @@ val = !!""; //          false`;
 String(20);
 Boolean(1);`
 
+
+  const notANumber = `console.log(1 + "hello"); // 1hello
+console.log(1 + 1 + "hello"); // 2hello
+console.log("hello" + 1 + 1); // hello11
+console.log(+undefined); // NaN
+console.log(+"hello"); // NaN`
+
   return (
     <div className="reveal" ref={deckDivRef}>
       <div className="slides">
@@ -83,6 +90,30 @@ Boolean(1);`
           <CodeBlock code={primitiveConstructors} />
         </section>
 
+
+
+        <section>
+          <h2>NaN</h2>
+          <h3>Not a Number</h3>
+          <CodeBlock code={notANumber} />
+
+          <Notes>
+            Code is executed left to right (Note: 2hello vs hello11)<br />
+            Values that cannot be cast to numbers return NaN<br />
+            Other illegal operations (errors) will return NaN as well <br />
+            such as division by zero or attempting to calculate the square root of a negative number.<br />
+            <br />
+            In many cases, you'll want to handle NaN values differently than actual numbers. For example, you might display an error message or re-try the calculation with valid input.<br />
+          </Notes>
+        </section>
+
+
+        <section>
+          <h2>Summary</h2>
+          Values can be cast or coerced from one type to another<br />
+          You can check the variables type with typeof keyword<br />
+          Truthy and Falsy values can be checked with double not
+        </section>
       </div>
     </div>
   )

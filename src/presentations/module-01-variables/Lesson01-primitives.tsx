@@ -45,6 +45,15 @@ let isHonest = false;`;
   const nullAndUndef = `let hisAge; // default to undefined
 let school = null;`
 
+
+  const letExample = `let x = 10;
+x = 20; // allowed!
+console.log(x); // outputs 20`;
+
+  const constExample = `const x = 10;
+x = 20; // TypeError: Assignment to constant variable!
+console.log(x); // outputs 10`;
+
   return (
     // Your presentation is sized based on the width and height of
     // our parent element. Make sure the parent is not 0-height.
@@ -245,12 +254,42 @@ age = undefined;`} />
         </section>
 
 
+        <section>
+          <h2>Let</h2>
+          <CodeBlock code={letExample} />
+          <Notes>
+            let declares a variable that can be reassigned, but its scope is limited to the current block or function.<br />
+            <br />
+            Variables declared with let are "block-scoped", meaning they are only accessible within the block they were declared in (e.g., inside an if statement).<br />
+          </Notes>
+        </section>
+
+
+
+        <section>
+          <h2>Const</h2>
+          <CodeBlock code={constExample} />
+          <Notes>
+            const declares a constant variable that cannot be reassigned once it's declared.<br />
+            <br />
+            Variables declared with const are "block-scoped" like those declared with let, but they also ensure the value remains unchanged throughout the program.<br />
+          </Notes>
+        </section>
+
+
+
+        <section>
+          <h2>Let vs Const</h2>
+          Use let for variables that need to be reassigned, such as loop counters or accumulators.
+
+          Use const for variables that should remain unchanged, such as object property names or configuration settings.
+        </section>
 
         <section>
           <h2>Summary</h2>
 
-          Primitive variables store values in memory to be used later in our code
-          Data types are inferred in JavaScript based on the value assigned to the variable
+          Primitive variables store values in memory to be used later in our code<br />
+          Data types are inferred in JavaScript based on the value assigned to the variable<br />
 
         </section>
 

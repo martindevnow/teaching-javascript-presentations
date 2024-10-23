@@ -35,3 +35,12 @@ void (function () {
   //
   console.log(val);
 })();
+
+void (function () {
+  console.log(":: TESTING NaN ::");
+  console.log(1 + "hello"); // 1hello
+  console.log(1 + 1 + "hello"); // 2hello
+  console.log("hello" + 1 + 1); // hello11
+  console.log(+undefined); // NaN
+  console.log(+"hello"); // NaN
+})();
