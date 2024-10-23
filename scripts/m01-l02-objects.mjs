@@ -21,3 +21,13 @@ void (function () {
 
   //
 })();
+
+void (function () {
+  console.log(":: SHALLOW COPY ::");
+  let original = { x: 1, y: 2, subObj: { z: 1 } };
+  let copy = { ...original };
+
+  copy.x = 10;
+  copy.subObj.z = 10;
+  console.log(original); // { x: 1, y: 2, subObj: { z: 10 } }
+})();
