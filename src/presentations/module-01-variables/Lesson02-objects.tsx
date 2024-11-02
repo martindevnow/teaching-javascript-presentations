@@ -1,5 +1,3 @@
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css";
 import useSlideshow from "../../hooks/useSlideshow";
 import CodeBlock from "../../atoms/CodeBlock";
 import Notes from "../../atoms/Notes";

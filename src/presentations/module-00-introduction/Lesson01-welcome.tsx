@@ -1,5 +1,7 @@
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
+import "../../github-dark-dimmed.css";
+
 import useSlideshow from "../../hooks/useSlideshow";
 
 const Lesson00 = () => {
